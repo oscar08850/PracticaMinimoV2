@@ -1,0 +1,37 @@
+<div class="datos-gruposinvestigacion" *ngIf="grupoinvestigacion">
+    <p>
+        Nombre del Grupo: {{grupoinvestigacion.nombregrupo}}
+    </p>
+
+    <p>
+        ID del Grupo: {{grupoinvestigacion.id}}
+    </p>
+
+    <p>
+        Descripcion: {{grupoinvestigacion.descripcion}}
+    </p>
+
+    <p>
+        Responsable: {{grupoinvestigacion.responsable}}
+    </p>
+
+    <p>
+        Url: {{grupoinvestigacion.url}}
+    </p>
+
+    <p>
+        Nombre Usuario: {{grupoinvestigacion.users.nombre}}
+    </p>
+
+
+     
+
+    <button (click) = "delete()">
+        ELIMINAR
+    </button>
+
+    <button (click) = "modificar()">
+        MODIFICAR
+    </button>
+
+</div>

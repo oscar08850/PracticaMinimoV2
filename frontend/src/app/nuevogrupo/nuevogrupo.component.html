@@ -1,0 +1,93 @@
+<div>
+    <h2>NUEVO GRUPO:</h2>
+    <form [formGroup]="grupoinvestigacionForm" (ngSubmit)="addgrupo()">
+        <p>
+          
+      Nombre del Grupo: <input type="string" placeholder="Nombre del Grupo" formControlName="nombregrupo" />*
+      <ng-container
+        *ngIf="!formControls.nombregrupo.valid &&formControls.nombregrupo.touched">
+        <p *ngIf="formControls.nombregrupo.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      ID del grupo: <input type="string" placeholder="ID del grupo" formControlName="id" />*
+      <ng-container
+        *ngIf="!formControls.id.valid &&formControls.id.touched">
+        <p *ngIf="formControls.id.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Descripcion: <input type="string" placeholder="descripcion" formControlName="descripcion" />*
+      <ng-container
+        *ngIf="!formControls.descripcion.valid && formControls.descripcion.touched">
+        <p *ngIf="formControls.descripcion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+  
+    <p>
+      responsable: <input type="string" placeholder="Responsable" formControlName="responsable" />*
+      <ng-container
+        *ngIf="!formControls.responsable.valid &&formControls.responsable.touched">
+        <p *ngIf="formControls.responsable.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Url: <input type="string" placeholder="Url" formControlName="url" />*
+      <ng-container
+        *ngIf="!formControls.url.valid &&formControls.url.touched">
+        <p *ngIf="formControls.url.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Nombre Usuario: <input type="string" placeholder="Nombre Usuario" formControlName="nombre" />*
+      <ng-container
+        *ngIf="!formControls.nombre.valid &&formControls.nombre.touched">
+        <p *ngIf="formControls.nombre.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+
+    <p>
+      Direccion: <input type="string" placeholder="Direccion" formControlName="direccion" />*
+      <ng-container
+        *ngIf="!formControls.direccion.valid &&formControls.direccion.touched">
+        <p *ngIf="formControls.direccion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      DNI: <input type="string" placeholder="DNI" formControlName="dni" />*
+      <ng-container
+        *ngIf="!formControls.dni.valid &&formControls.dni.touched">
+        <p *ngIf="formControls.dni.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+
+      <p>
+        <input type="submit" value="Añadir" [disabled]="grupoinvestigacionForm.invalid" />
+        <input type="submit" value="Atrás" (click) = "atras()" />
+      </p>
+    </form>
+  </div>
+  
